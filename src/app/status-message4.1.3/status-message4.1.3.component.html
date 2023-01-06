@@ -1,0 +1,89 @@
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">
+Understanding SC 4.1.3 Status messages
+</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="/WCAG" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>
+Understanding SC 4.1.3 Status messages
+</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+
+<div class="Head_1">
+  <span>Table of Contents</span>
+</div>
+<div class="list_1">
+  <ul>
+    <li class="list_2"><a href="status-messages/#status">What are status messages?</a></li>
+    <li class="list_2"><a href="status-messages/#criterion">How do we meet this criterion?</a></li>
+    <!-- <li class="list_2"><a href="status-messages/#checkpoint">Users who benefit this checkpoint are:</a></li> -->
+    <li class="list_2"><a href="status-messages/#points-to-ponder">Points to Ponder</a></li>
+      <ul><li class="list_2"><a href="status-messages/#related-wcag-articles">Related WCAG Articles</a></li>
+        <li class="list_2"><a href="status-messages/#resources-on-consistent-identification">Useful A11Y Resources on Error Suggestion</a>
+          <ul><li class="list_2"><a href="status-messages/#references">References</a></li>
+          </ul>
+        </li>
+      </ul>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/4.1.3-status-Messages.png?resize=300%2C300&ssl=1" alt="">
+</div>
+<blockquote class="quote"><p>Success Criterion 4.1.3 Status Messages (Level AA): In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.</p></blockquote>
+
+<p class="para_1">The modern web pages are so dynamic that many a times the results of user interactions are more visual. Error messages, success messages that do not receive keyboard focus very often go unnoticed by the assistive technology (screen reader) users. More often than not, users are left wondering what is happening on the pages or whether they successfully performed tasks. This success criterion intends to bridge that gap by asking the authors that such status messages be programmatically determined so that screen readers or other assistive technologies detect such messages automatically and provide feedback either by announcing the messages or by any other means that the users prefer.</p>
+
+<h2 id="status" class="head_5">What are status messages?</h2>
+<p class="para_1">Success toasts, form errors, cart updates, interstitial loading indicators, dynamically updating number of search results are some examples of status messages. Note that the focus does not shift to such messages but visual users are aware of them. Also, any modification of status messages, off-screen messages like delete confirmation can be considered as status messages.
+</p>
+<h2 id="criterion" class="head_5">How do we meet this criterion?</h2>
+<p class="para_1">With the evolution of ARIA, automatic announcement of status messages in web pages are now possible. We can use either aria-live regions or role=”alert” to announce the status updates. However, we need to practise caution. Too much of aria-live regions would kill accessibility. For example, a page contains a carousel that updates automatically. Now, do we announce the slide change through aria-live? First, such a dynamic update is a status message? The answer is ‘a double no.’ This is a content update and not a status message. Besides, such live region usage will interfere with screen readers preventing the users from performing the primary tasks. Note that mobile apps also must announce status messages with appropriate roles and properties applicable within the mobile programming languages.</p>
+
+
+
+
+<h2 id="points-to-ponder" class="head_5">Points to Ponder</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_9d04fd-aa kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Ensure all success toasts and error messages are announced by screen reader</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Do not fill the pages with live regions. Decide which is an important update and qualifies a status message intelligently</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Ensure focusable messages are not considered as status messages.</span></li></ul></div>
+
+
+
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_eee383-78 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-1-4-11-non-text-contrast/" data-type="post" data-id="5147">Understanding SC 1.4.11 Non-text Contrast</a></span></li></ul></div>
+
+
+
+
+<h3 id="resources-on-consistent-identification" class="head_5">Useful A11Y Resources on Status Messages</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_8d78a0-f5 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" rel="nofollow noopener">Status Messages</a></span></li></ul></div>
+
+
+
+
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_07ee32-c9 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html" rel="nofollow noopener">Understanding Success Criterion 4.1.3: Status Messages</a></span></li></ul></div>
+
+
+</div>
+</div>
+</div>

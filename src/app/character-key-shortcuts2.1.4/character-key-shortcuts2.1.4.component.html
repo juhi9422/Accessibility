@@ -1,0 +1,312 @@
+<br>
+
+<div class="container" id="main">
+
+
+  <div id="inner-wrap" class="wrap hfeed kt-clear">
+  	<div id="primary" class="content-area">
+  	  <div class="content-container site-container">
+  		  <main id="main" class="site-main" role="main">
+  				<div class="content-wrap">
+  				  <article id="post-1461" class="entry content-bg single-entry post-footer-area-boxed post-1461 post type-post status-publish format-standard has-post-thumbnail hentry category-wcag tag-a11y tag-keyboard tag-operable tag-wcag">
+  	          <div class="entry-content-wrap">
+  		          <header class="entry-header post-title title-align-inherit title-tablet-align-inherit title-mobile-align-inherit">
+  	              <div class="kadence-breadcrumbs rankmath-bc-wrap">
+                    <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+                      <p id="p">
+                        <a href="/home">Home</a><span class="separator"> » </span>
+                        <span class="last">Understanding SC 2.1.4 Keyboard</span>
+                      </p>
+                    </nav>
+                  </div>
+                        <div class="entry-taxonomies">
+                   <span class="category-links term-links category-style-normal">
+                    <a href="https://www.digitala11y.com/category/web-accessibility/wcag/" rel="tag">WCAG</a>
+                   </span>
+                      </div><!-- .entry-taxonomies -->
+                        <h1 class="entry-title">Understanding SC 2.1.4 Keyboard</h1>
+
+                </header><!-- .entry-header -->
+
+                <div class="entry-content single-content">
+
+
+               <nav id="navbar" class="navbar bg-light px-3 mb-3">
+                  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                  <div class="container">
+                    <span class="listitem" id="pp">Table of Contents</span>
+                  </div>
+                  <div class="container" id="p">
+                    <ul class="nav nav-pills">
+                      <ul>
+                        <li>
+                          <a class="list-group-item" href="#desc">Description</a>
+                        </li>
+                        <li>
+                          <a class="list-group-item" href="#Heading1">Points to Ponder</a>
+                        </li>
+                        <ul>
+                          <li>
+                            <a class="list-group-item" href="#Heading2">Related WCAG Articles</a>
+                          </li>
+                          <ul>
+                            <li>
+                              <a class="list-group-item" href="#Heading4">References</a>
+                            </li>
+                          </ul>
+
+                        </ul>
+                      </ul>
+
+
+                      <!-- <li>
+
+                        <a class="list-group-item" href="#Heading1">Points to Ponder</a>
+                        <ul>
+                          <li>
+                          <a class="list-group-item" href="#Heading2">Related WCAG Articles</a>
+                          </li>
+                          <ul>
+                            <li>
+
+                              <a class="list-group-item" href="#Heading3">Useful Resources on Keyboard</a>
+                            </li>
+                          </ul>
+                          <ul>
+                            <li>
+                              <a class="list-group-item" href="#Heading4">References</a>
+                            </li>
+                          </ul>
+
+                        </ul>
+                      </li> -->
+                    </ul>
+                  </div>
+
+
+                </nav>
+                <hr>
+                <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+                  <!-- <h4 id="Heading1">Points To Ponder</h4> -->
+                  <div class="wp-block-image">
+                  <figure class="aligncenter size-full is-resized">
+                    <img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/2.1.4-Character-Key-Shortcuts.png?resize=256%2C256&ssl=1" alt="" class="wp-image-12379 lazyloaded" width="256" height="256" data-recalc-dims="1" data-ll-status="loaded">
+                    <noscript>
+                      <img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/2.1.1-Keyboard.png?resize=256%2C256&#038;ssl=1" alt="" class="wp-image-12379" width="256" height="256" data-recalc-dims="1" />
+                    </noscript>
+                  </figure>
+                  </div>
+
+                  <blockquote id="desc">
+                    <p class="p" id="p">
+                    Success Criterion 2.1.4 Character Key Shortcuts (Level A): If a keyboard shortcut is implemented
+                     in content using only letter (including upper- and lower-case letters), punctuation,
+                     number, or symbol characters, then at least one of the following is true:
+                    </p>
+                    <ul class="p" id="p">
+                    <li>Turn off<br>
+                    A mechanism is available to turn the shortcut off;
+                    </li>
+                    <li>Remap<br>
+                    A mechanism is available to remap the shortcut to include one or more non-printable
+                    keyboard keys (e.g., Ctrl, Alt);
+                    </li>
+                    <li>Active only on focus<br>
+                    The keyboard shortcut for a user interface component is only active when that
+                    component has focus.
+                    </li>
+                    </ul>
+                  </blockquote>
+                  <br>
+
+                  <p class="p" id="p">In recent years productivity has been the one of the key driving
+                    factor & as a result developers are building applications with shortcut keys.
+                    Developers implement shortcut keys that you can invoke & most of the functionality
+                    can be achieved without touching a mouse. Some of these shortcut keys trigger just
+                    with a single key or with a combination of keys. For example on YouTube you can pause
+                    the video by just pressing “K” but this key stroke conflicts with the screen reader.
+                    When the key “K” is pressed while a screen reader is running the shortcut key doesn’t
+                    trigger the “play” as it moves from one link to another link n NVDA.
+                  </p>
+
+
+
+                  <p class="p" id="p">Similarly, when people who use speech recognition software like dragon
+                    naturally speaking or similar software’s, they tend to spell the words out character by
+                    character & there is a higher probability that these shortcut keys that trigger with a
+                    single key will get triggered. The user cannot perform the task at hand due to these
+                    challenges. For example, In a transactions page, a single printable key “d” is assigned
+                    as a short cut key to delete a transaction. On the same page, the users can search transactions.
+                    When speech input users dictate the letters to input a search term and when they dictate “d”,
+                    instead of printing the character “d” in the search field, this might delete any transaction.
+                   </p>
+
+
+
+                    <p class="p" id="p">The intent of this success criterion is to provide the user with full
+                      control on how these character key shortcuts [single key events] can be managed.
+                      The SC has provided 3 specific guidelines to pass this success criterion,
+                    </p>
+
+                    <ul class="p" id="p">
+                      <li>Turn off: A mechanism is available to turn the shortcut off;
+                      </li>
+                      <li>Remap: A mechanism is available to remap the shortcut to use one or more non-printable keyboard characters (e.g. Ctrl, Alt, etc.);
+                      </li>
+                      <li>Active only on focus: The keyboard shortcut for a user interface component is only active when that component has focus.
+                     </li>
+                    </ul>
+
+                    <p class="p" id="p">
+                      Gmail is a perfect example to manage these single character key shortcuts.
+                      For example, when the users are in the messages grid of the inbox,
+                      then ‘x’ will select any email and # will delete those selected emails.
+                      But both the shortcuts will not work outside the email grid.
+                    </p>
+                    <hr>
+                    <br>
+                    <h4 id="Heading1">Points To Ponder</h4>
+
+                    <div class="container">
+                      <ul class="ul-1">
+                        <li class="listitem-1">
+                          <div class="container">
+                            <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="list-text">Don’t use single character key shortcuts if possible.</span>
+                          </div>
+                        </li>
+                        <li class="listitem-1">
+                          <div class="container">
+                            <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="kt-svg-icon-list-text">Provide a mechanism to turn off the character key shortcuts.</span>
+                          </div>
+                        </li>
+                        <li class="listitem-1">
+                          <div class="container">
+                            <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="kt-svg-icon-list-text">design all the keyboard shortcuts with the combinations of non-printable keys.</span>
+                          </div>
+                        </li>
+                        <li class="listitem-1">
+                          <div class="container">
+                            <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span class="kt-svg-icon-list-text">Let the user trigger the shortcut key only when the element has keyboard focus.</span>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+<br>
+<br>  <hr>
+                  <h4 id="Heading2">Related WCAG Articles</h4>
+
+                  <div class="container">
+                    <ul class="ul-2">
+                      <li class="listitem-2">
+                        <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye">
+
+                          <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
+                          </path></svg>
+                        </div>
+                        <span class="kt-svg-icon-list-text">
+                          <a href="/guidelines" data-type="post" data-id="1448">Understanding SC 2.1.2 No Keyboard Trap</a>
+                        </span>
+                      </li>
+                      <li class="listitem-2">
+                        <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye">
+
+                          <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
+                          </path></svg>
+                        </div>
+                        <span class="kt-svg-icon-list-text">
+                          <a href="/guidelines" data-type="post" data-id="1448">Understanding SC 2.1.1 Keyboard</a>
+                        </span>
+                      </li>
+
+                    </ul>
+                  </div>
+
+                  <!-- <h4 id="Heading3">Useful Resources on Keyboard</h4>
+                  <p>...</p> -->
+
+                  <br><hr>
+                  <h4 id="Heading4">References</h4>
+
+
+                  <div class="container">
+                    <ul class="ul-3">
+                      <li class="listitem-3">
+                        <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe">
+
+                          <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                            </path>
+                          </svg>
+                          <!-- <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
+                          </path></svg> -->
+                        </div>
+                        <span class="kt-svg-icon-list-text"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html" rel="nofollow noopener">Understanding Success Criterion 2.1.4 : Character Key Shortcuts </a>
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- <h4 id="scrollspyHeading5">Fifth heading</h4>
+                  <p>...</p> -->
+                </div>
+
+
+
+
+
+                <div class="container justify-content-center">
+                  <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-sm-6 p-2">
+                      <div class="container" id="p">
+                        <a class="next text-center" href="/guidelines">Read Next: Understanding SC 2.1.2 No Keyboard Trap
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-3">
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="container" id="p">
+                        <a class="previous text-center" href="https://www.digitala11y.com/wcag-checklist/">Explore our WCAG Checklist
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="container p-4">
+
+                </div>
+
+
+      </div><!-- .entry-content -->
+  	</div>
+  </article><!-- #post-1461 -->
+
+  			</div>
+  					</main><!-- #main -->
+
+  	    </div>
+    </div><!-- #primary -->
+  </div>
+</div>

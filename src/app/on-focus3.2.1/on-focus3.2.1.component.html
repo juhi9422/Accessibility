@@ -1,0 +1,93 @@
+
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">
+Understanding SC 3.2.1 On Focus
+</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="/WCAG" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>
+Understanding SC 3.2.1 On Focus
+</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+
+<div class="Head_1">
+  <span>Table of Contents</span>
+</div>
+<div class="list_1">
+  <ul>
+    <li class="list_2"><a href="on-focus/#ensure">Ensure that:</a></li>
+    <!-- <li class="list_2"><a href="status-messages/#checkpoint">Users who benefit this checkpoint are:</a></li> -->
+    <li class="list_2"><a href="on-focus/#points-to-ponder">Points to Ponder</a></li>
+    <li class="list_2"><a href="on-focus/#exceptions">Exceptions</a></li>
+      <ul><li class="list_2"><a href="on-focus/#related-wcag-articles">Related WCAG Articles</a></li>
+        <li class="list_2"><a href="on-focus/#resources-on-focus">Useful A11Y Resources on Focus</a>
+          <ul><li class="list_2"><a href="on-focus/#references">References</a></li>
+          </ul>
+        </li>
+      </ul>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/3.2.1-OnFocus.png?resize=256%2C256&ssl=1" alt="">
+</div>
+<blockquote class="quote"><p>3.2.1 On Focus: When any component receives focus, it does not initiate a change of context. (Level A)</p></blockquote>
+
+<p class="para_1">The intent of this success criterion is to make sure that any unwanted actions are not initiated when focus moves on to an element. For example during tab navigation or shift tab navigation if user focus moves on to a link & a modal is triggered this fails this check point. Here user did not initiate this action; it was initiated when user focus moved on to a particular element. If the website is built using HTML & CSS purely, we will not encounter such behavior. This behavior is seen a lot on websites built with fancy scripting where the developers have no knowledge about accessibility. We must also take mouse users into consideration while testing for this checkpoint; while mouse pointer moves onto elements no actions should be initiated.</p>
+
+<h2 id="ensure" class="head_5">Ensure that:</h2>
+<ul><li>Links don’t open new page or new window when focused with mouse or keyboard.</li><li>Forms don’t submit automatically.</li><li>There are no pop-ups or modal windows opening on pageload or focusing on an element.</li><li>Focus should not move automatically to another element where it disorients the users.</li></ul>
+
+
+
+
+
+
+<h2 id="points-to-ponder" class="head_5">Points to Ponder</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_ba89a2-9f kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list icon_1"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Ensure that no element changes by receiving focus.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">We should avoid both visual &amp; behavioral modifications to page.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">A website built using only HTML &amp; CSS will not have on focus by default, one needs to provide this through scripting.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-3 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">One way to test this check point is to unplug the mouse &amp; navigate the page using the keyboard.</span></li></ul></div>
+
+
+<h2 id="exceptions" class="head_5">Exceptions</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_6f9cd3-d4 kt-svg-icon-list-columns-1 alignnone kt-list-icon-aligntop icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fa_expeditedssl"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 496 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" aria-hidden="true"><path d="M248 43.4C130.6 43.4 35.4 138.6 35.4 256S130.6 468.6 248 468.6 460.6 373.4 460.6 256 365.4 43.4 248 43.4zm-97.4 132.9c0-53.7 43.7-97.4 97.4-97.4s97.4 43.7 97.4 97.4v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6c0-82.1-124-82.1-124 0v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6zM389.7 380c0 9.7-8 17.7-17.7 17.7H124c-9.7 0-17.7-8-17.7-17.7V238.3c0-9.7 8-17.7 17.7-17.7h248c9.7 0 17.7 8 17.7 17.7V380zm-248-137.3v132.9c0 2.5-1.9 4.4-4.4 4.4h-8.9c-2.5 0-4.4-1.9-4.4-4.4V242.7c0-2.5 1.9-4.4 4.4-4.4h8.9c2.5 0 4.4 1.9 4.4 4.4zm141.7 48.7c0 13-7.2 24.4-17.7 30.4v31.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-31.6c-10.5-6.1-17.7-17.4-17.7-30.4 0-19.7 15.8-35.4 35.4-35.4s35.5 15.8 35.5 35.4zM248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 478.3C121 486.3 17.7 383 17.7 256S121 25.7 248 25.7 478.3 129 478.3 256 375 486.3 248 486.3z"></path></svg></div><span class="kt-svg-icon-list-text">Elements can change on focus if the context doesn’t change. For example, you can use a dynamic menu on your website, the kind where navigation options drop down when you hover over an item. This is not a change of context.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fa_expeditedssl"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 496 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" aria-hidden="true"><path d="M248 43.4C130.6 43.4 35.4 138.6 35.4 256S130.6 468.6 248 468.6 460.6 373.4 460.6 256 365.4 43.4 248 43.4zm-97.4 132.9c0-53.7 43.7-97.4 97.4-97.4s97.4 43.7 97.4 97.4v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6c0-82.1-124-82.1-124 0v26.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-26.6zM389.7 380c0 9.7-8 17.7-17.7 17.7H124c-9.7 0-17.7-8-17.7-17.7V238.3c0-9.7 8-17.7 17.7-17.7h248c9.7 0 17.7 8 17.7 17.7V380zm-248-137.3v132.9c0 2.5-1.9 4.4-4.4 4.4h-8.9c-2.5 0-4.4-1.9-4.4-4.4V242.7c0-2.5 1.9-4.4 4.4-4.4h8.9c2.5 0 4.4 1.9 4.4 4.4zm141.7 48.7c0 13-7.2 24.4-17.7 30.4v31.6c0 5-3.9 8.9-8.9 8.9h-17.7c-5 0-8.9-3.9-8.9-8.9v-31.6c-10.5-6.1-17.7-17.4-17.7-30.4 0-19.7 15.8-35.4 35.4-35.4s35.5 15.8 35.5 35.4zM248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 478.3C121 486.3 17.7 383 17.7 256S121 25.7 248 25.7 478.3 129 478.3 256 375 486.3 248 486.3z"></path></svg></div><span class="kt-svg-icon-list-text">Another example would be a hover status on a link, again, this isn’t a change of context.</span></li></ul></div>
+
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_4ec2db-fe kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-2-2-2-pause-stop-hide/" data-type="post" data-id="1400">Understanding SC 2.2.2 Pause, Stop, Hide</a></span></li></ul></div>
+
+
+
+
+
+
+
+<h3 id="resources-on-focus" class="head_5">Useful A11Y Resources on Focus</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_5101b8-a3 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus" rel="nofollow noopener">On Focus</a></span></li></ul></div>
+
+
+
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_745698-95 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-receive-focus.html" rel="nofollow noopener">Understanding Success Criterion 3.2.1 </a></span></li></ul></div>
+
+</div>
+
+</div>
+</div>

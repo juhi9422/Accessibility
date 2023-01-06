@@ -1,0 +1,95 @@
+.main_1{
+  width: auto;
+  background-color: #f7fafc;
+  padding: 80px 70px;
+}
+
+.col_1{
+  width: 60%;
+  display: inline-block;
+  padding-top: 25px;
+  /* background-color: red; */
+}
+
+.entry_3{
+  color: #4a5568;
+  font-size: 15px;
+}
+
+.entry_1 a{
+  color: #215387;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.a_7 h1{
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 28px;
+    line-height: 1.5;
+    font-family: "Source Sans Pro", sans-serif;
+    padding-top: 8px;
+}
+
+.Head_1{
+  font-size: 110%;
+  font-weight: 700;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.list_1 ul{
+  list-style-type:disc;
+  padding-top:5px;
+ /* list-style-position: inside; */
+}
+
+.list_2 a{
+  color: black;
+  font-size: 17px;
+  padding: 5px;
+}
+
+.img_2 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+}
+
+
+.quote{
+  border-left: black;
+  border-width: 3.5px;
+  border-left-style: solid;
+  padding-left: 20px;
+  border-color: #4a5568;
+  font-size: 18px;
+}
+
+
+.para_1{
+  font-size: 18px;
+}
+
+.head_5{
+font-style: normal;
+font-weight: 400px;
+font-size: 28px;
+line-height: 1.5;
+font-family: "Source Sans Pro", sans-serif;
+}
+
+
+.icon_1 li{
+  list-style-type: none;
+}
+
+.kt-svg-icon-list{
+  line-height: 2;
+}

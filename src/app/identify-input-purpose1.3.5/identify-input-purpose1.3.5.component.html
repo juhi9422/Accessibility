@@ -1,0 +1,227 @@
+<!-- <br>
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item mx-2"><a href="/home">Home</a></li>
+    <li class="breadcrumb-item"><a href="/guidelines">Guidelines</a></li>
+    <li class="breadcrumb-item active" aria-current="page">1.3.5 Identify Input Purpose</li>
+  </ol>
+</nav>
+<br>
+<div class="container">
+  <section id="head">
+            <h2>Understanding Success Criterion 1.3.5: Identify Input Purpose</h2>
+          </section>
+<section id ="desc">
+  <p>
+    Success Criterion 1.3.5 Identify Input Purpose (Level AA): The purpose of each input field collecting information about the user can be programmatically determined when:
+</p><ul>
+<li>The input field serves a purpose identified in the Input Purposes for user interface components section; and</li>
+<li>The content is implemented using technologies with support for identifying the expected meaning for form input data.</li>
+</ul>
+</section>
+<br>
+
+  <section id="intent">
+            <h3>Intent</h3>
+            <p>The intent of this Success Criterion is to ensure that the purpose of a form input
+               collecting information about the user can be programmatically determined, so that
+               user agents can extract and present this purpose to users using different modalities.
+               The ability to programmatically declare the specific kind of data expected in a particular
+               field makes filling out forms easier, especially for people with cognitive disabilities.</p>
+            <p>Appropriate visible labels and instruction can help users understand the purpose of
+               form input fields, but users may benefit from having fields that collect specific
+               types of information be rendered in an unambiguous, consistent, and possibly customized
+               way for different modalities - either through defaults in their user agent, or through
+               the aid of assistive technologies.</p>
+            <p>For some input fields, the type attribute already offers a way to broadly specify
+               the intention of the input field, for example, input type="tel", input type="email",
+               or input type="password". However, these are only very broad categories, describing
+               the type of input, but not necessarily its purpose, especially as it relates to user-specific
+               input fields. As an example, type="email" indicates that the field is for an e-mail
+               address but does not clarify if the purpose is for entering the user's e-mail address
+               or some other person's e-mail.</p>
+            <p>This success criterion defines the types of user interface component input purposes,
+               found in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">Section 7 of the WCAG 2.1 Recommendation</a>, that must be programmatically identifiable. When these user input purposes are present,
+               and if the technology supports doing so, the field purpose must be programmatically
+               identifiable.</p>
+            <p>The HTML autocomplete attribute only accepts a certain number of specific well-defined
+               fixed values. This allows a more fine-grained definition or identification of purpose
+               than the type attribute, for example, by allowing the author to specify a specific
+               type of name: Name (autocomplete="name”), Given Name (autocomplete="given-name”),
+               Family Name (autocomplete="family-name”), as well as Username (autocomplete="username”),
+               and Nickname (autocomplete="nickname”).</p>
+            <p>By adopting and repurposing this predefined taxonomy of definitions, user agents and
+               assistive technologies can now present the purpose of the inputs to users in different
+               modalities. For example, assistive technologies may display familiar icons next to
+               input fields to help users who have difficulties reading. An icon of a birthday cake
+               may be shown in front of an input field with autocomplete="bday", or the icon of a
+               telephone in front of an input field with autocomplete="tel".</p>
+            <p>In addition to repurposing this taxonomy, when the autocomplete attribute technique
+               is used to meet this Success Criterion, browsers and other user agents can suggest
+               and 'autofill' the right content by autocompleting these fields based on past user
+               input stored in the browser. By defining more granular definitions of common input
+               purposes, for example “Birthday” (autocomplete=”bday”), browsers can store personalized
+               values for each of these fields (the user's birthday date). The user is relieved of
+               having to type the information and can instead confirm or, if needed, change the value
+               of the field, a significant benefit for users with memory issues, dyslexia, and other
+               disabilities. Because the autocomplete values are independent of language, users that
+               may not be familiar with the text used to visually identify user input fields (the
+               label) can still have that purpose consistently identified to them due to the fixed
+               taxonomy of terms.</p>
+            <p>If an input field accepts two different types of input purpose (as in combined user
+               name/user email fields) and the technology used does not allow multiple purpose values
+               to be defined, it is valid to provide either one or the other value or leave out the
+               designation of input purpose altogether.</p>
+            <p>When the user agent and assistive technology support for other metadata formats matures,
+               metadata schemes like the <a href="https://w3c.github.io/personalization-semantics/content/">Personalization Semantics Content Module</a> may be used in addition or instead of the HTML autocomplete attribute to identify
+               the purpose of input fields. They can also support automated adaptations that identify
+               and match author-provided input labels to defined vocabularies or symbols that are
+               used instead for labelling inputs.</p>
+         </section>
+         <br>
+         <section id="benefits">
+         <h3>Benefits</h3>
+         <ul>
+
+<li>People with language and memory related disabilities or disabilities that affects executive function and decision-making benefit from the browser auto-filling personal information (such as name or address) when the autocomplete attribute is used to meet this Success Criterion, which means information does not need to be remembered by the user.</li>
+<li>People with cerebral palsy, stroke, head injury, motor neuron disease or learning disability sometimes prefer images for communication. They can employ assistive technology which adds icons to input fields to communicate the purpose of the fields visually.</li>
+<li>People with motor impairments also benefit from reducing the need for manual input when filling out forms.</li>
+      </ul>   </section>
+<br>
+      <section id="examples">
+      <h3>Examples</h3>
+      <ul>
+
+<li id="listheading">A contact form using autofill</li>
+<p>A contact form auto-fills in the fields for name, street, post code, city, telephone number and email address from autofill values stored in the user's browser. Assistive technology can offer a customized way of identifying particular input fields, for example drawing on a set of symbols / icons that is familiar to the user, to communicate the purpose of the fields visually.
+An order from with separate billing and shipping address
+A product order form fills in the address fields for billing address and a separate set of address fields for the shipping address, using the autofill detail tokens 'billing' and 'shipping'
+A contact form using icons
+A browser plugin to add icons inserts icons representing the person's name, home address, telephone number and email address to identify the input purpose visually.
+</p>
+<li id="listheading">An order from with separate billing and shipping address</li>
+<p>
+A product order form fills in the address fields for billing address and a separate set of address fields for the shipping address, using the autofill detail tokens 'billing' and 'shipping'
+</p>
+<li id="listheading">A contact form using icons</li>
+<p>
+A browser plugin to add icons inserts icons representing the person's name, home address, telephone number and email address to identify the input purpose visually.</p>
+
+   </ul>   </section>
+   <br>
+   <section id="whoithelps">
+     <h3>Who It Helps</h3>
+     <ul>
+      <li>Users with cognitive disabilities who may have difficulties filling out forms.</li>
+      <li>Users with impaired memory.</li>
+      <li>Users with cognitive disabilities who prefer to use custom icon sets to label forms rather than words.</li>
+      <li>Users with motor disabilities who have difficulty filling out forms and benefit from the speed of autocomplete.</li>
+      <li>Users who like the convenience of autocomplete.</li>
+     </ul>
+   </section>
+</div> -->
+
+<div class="container">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item mx-2"><a href="/home">Home</a></li>
+      <li class="breadcrumb-item"><a href="/guidelines">Guidelines</a></li>
+      <li class="breadcrumb-item active" aria-current="page">1.3.5 Identify Input Purpose</li>
+    </ol>
+  </nav>
+  <br>
+<div id="inner-wrap" class="wrap hfeed kt-clear">
+		<div id="primary" class="content-area">
+	<div class="content-container site-container">
+		<main id="main" class="site-main" role="main">
+						<div class="content-wrap">
+				<article id="post-4942" class="entry content-bg single-entry post-footer-area-boxed post-4942 post type-post status-publish format-standard has-post-thumbnail hentry category-wcag">
+	<div class="entry-content-wrap">
+		<header class="entry-header post-title title-align-inherit title-tablet-align-inherit title-mobile-align-inherit">
+	<!-- <div class="kadence-breadcrumbs rankmath-bc-wrap"><nav aria-label="breadcrumbs" class="rank-math-breadcrumb"><p><a href="https://www.digitala11y.com">Home</a><span class="separator"> » </span><span class="last">Understanding SC 1.3.5 Identify Input Purpose</span></p></nav></div> -->
+  		<div class="entry-taxonomies">
+			<span class="category-links term-links category-style-normal">
+				<a href="https://www.digitala11y.com/category/web-accessibility/wcag/" rel="tag">WCAG</a>			</span>
+		</div><!-- .entry-taxonomies -->
+		<!-- <h1 class="entry-title">Understanding SC 1.3.5 Identify Input Purpose</h1><div class="entry-meta entry-meta-divider-dot">
+	<span class="posted-by"><span class="author-avatar"><a class="author-image" href="https://www.digitala11y.com/author/sathishkumar/" aria-label="Author image"><img alt="Avatar for sathish kumar" title="Gravatar for sathish kumar" src="https://secure.gravatar.com/avatar/4086f4c408758f4409c9e211e4a2dceb?s=25&amp;d=mm&amp;r=g" class="avatar avatar-25 photo lazyloaded" height="25" width="25" loading="lazy" decoding="async" srcset="https://secure.gravatar.com/avatar/4086f4c408758f4409c9e211e4a2dceb?s=50&amp;d=mm&amp;r=g 2x" data-ll-status="loaded"><noscript><img alt='Avatar for sathish kumar' title='Gravatar for sathish kumar' src='https://secure.gravatar.com/avatar/4086f4c408758f4409c9e211e4a2dceb?s=25&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/4086f4c408758f4409c9e211e4a2dceb?s=50&#038;d=mm&#038;r=g 2x' class='avatar avatar-25 photo' height='25' width='25' loading='lazy' decoding='async'/></noscript></a><span class="image-size-ratio"></span></span><span class="meta-label">Authored By :</span><span class="author vcard"><a class="url fn n" href="https://www.digitala11y.com/author/sathishkumar/">sathish kumar</a></span></span>					<span class="updated-on">
+						<span class="meta-label">Last Updated :</span><time class="entry-date published updated" datetime="2022-06-20T14:06:00+05:30">June 20, 2022</time>					</span>
+										<span class="category-links">
+						<span class="category-link-items"><a href="https://www.digitala11y.com/category/web-accessibility/wcag/" rel="category tag">WCAG</a></span>					</span>
+					</div><!-- .entry-meta -->
+</header><!-- .entry-header -->
+
+<div class="entry-content single-content">
+	<nav class="wp-block-kadence-tableofcontents kb-table-of-content-nav kb-table-of-content-id_bb5945-ad" role="navigation" aria-label="Table Of Contents"><div class="kb-table-of-content-wrap"><div class="kb-table-of-contents-title-wrap kb-toggle-icon-style-arrow"><span class="kb-table-of-contents-title">Table of Contents</span></div><ul class="kb-table-of-content-list kb-table-of-content-list-columns-1 kb-table-of-content-list-style-disc kb-table-of-content-link-style-underline"><li><a class="kb-table-of-contents__entry" href="#-how-does-this-help-"> How does this help? </a></li><li><a class="kb-table-of-contents__entry" href="#-examples-of-autocomplete-attribute-"> Examples of autocomplete attribute </a></li><li><a class="kb-table-of-contents__entry" href="#-exception-"> Exception </a></li><li><a class="kb-table-of-contents__entry" href="#-points-to-ponder-"> Points to Ponder </a><ul class="kb-table-of-contents-list-sub"><li><a class="kb-table-of-contents__entry" href="#related-wcag-articles">Related WCAG Articles</a></li><li><a class="kb-table-of-contents__entry" href="#useful-a11y-resources-on-identifying-input-purpose">Useful A11Y Resources on Identifying Input Purpose</a><ul class="kb-table-of-contents-list-sub"><li><a class="kb-table-of-contents__entry" href="#references-">References </a></li></ul></li></ul></li></ul></div></nav>
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full is-resized"><img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/1.3.5-identify-input-purpose-loginid-and-password.jpg?resize=320%2C226&amp;ssl=1" alt="" class="wp-image-12280 lazyloaded" width="320" height="226" data-recalc-dims="1" data-ll-status="loaded"><noscript><img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/1.3.5-identify-input-purpose-loginid-and-password.jpg?resize=320%2C226&#038;ssl=1" alt="" class="wp-image-12280" width="320" height="226" data-recalc-dims="1" /></noscript></figure></div>
+
+
+<blockquote><p>
+Success Criterion 1.3.5 Identify Input Purpose (Level AA): The purpose of each input field collecting information about the user can be programmatically determined when:</p><ul>
+<li> The input field serves a purpose identified in the Input Purposes for User Interface Components section; and </li>
+<li> The content is implemented using technologies with support for identifying the expected meaning for form input data. <ul></ul></li>
+</ul></blockquote>
+
+
+
+<p>For people with some or other cognitive disabilities that include memory, learning, reading etc., remembering their own personal data and filling them each time are difficult tasks. This applies to even persons with motor disabilities who find entering input data much irksome.<br>The goal of this success criterion is to simplify this process by providing a purpose to those fields that collect users’ personal data like name, date of birth, email etc. This includes programmatically determinable methods apart from using labels and the type attribute as they are more broader for the cognitively disabled users to understand.</p>
+
+
+
+<h2 id="-how-does-this-help-"> How does this help? </h2>
+
+
+
+<p>One method suggested as part of this SC is to use the HTML 5.2 autocomplete attribute with appropriate tokens. This helps the browsers to store very specific personal data and fill them as appropriate. Further, for people who find difficult to understand words, an assistive technology can add a personalized symbol after identifying the programmatically determinable purpose of the input fields. For example, a birthday cake picture can be added close to the field that asks for date of birth so that the users can fill their date of birth.</p>
+
+
+
+<h2 id="-examples-of-autocomplete-attribute-"> Examples of autocomplete attribute </h2>
+
+
+
+<p>First name: autocomplete=”given-name”<br>
+Last Name: autocomplete=”family-name”<br>
+User Name: autocomplete=”username”<br>
+There are 53 fields and respective autocomplete attribute tokens that are defined in HTML 5.2 that the developers can use to provide purpose to the input fields that collect user data.</p>
+
+
+
+<h2 id="-exception-"> Exception </h2>
+
+
+
+<p>This applies to only  user data and not to other data. For example, an email field in the gift card page can mean the sender (user) and recipient. In this, the autocomplete attribute can be applied to only the sender or the direct user and not to the recipient’s email.</p>
+
+
+
+<h2 id="-points-to-ponder-"> Points to Ponder </h2>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_c4cb51-3c kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text"> Provide programmatically determinable input purpose </span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text"> Use appropriate token values while using autocomplete attribute </span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text"> Do not use autocomplete on input fields that does not ask for user data. </span></li></ul></div>
+
+
+
+<h3 id="related-wcag-articles">Related WCAG Articles</h3>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_e96525-9a kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-1-3-1-info-and-relationship/" data-type="post" data-id="2245">Understanding SC 1.3.1 Info and Relationship</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-1-3-2-meaningful-sequence/" data-type="post" data-id="2221">Understanding SC 1.3.2 Meaningful Sequence</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-2-5-3-label-in-name/" data-type="post" data-id="5798">Understanding SC 2.5.3 Label in Name</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-3 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/headings-labels-understanding-sc-2-4-6/" data-type="post" data-id="1242">Understanding SC 2.4.6 Headings and Labels</a></span></li></ul></div>
+
+
+
+<h3 id="useful-a11y-resources-on-identifying-input-purpose">Useful A11Y Resources on Identifying Input Purpose</h3>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_5f1787-e9 kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text">Find out&nbsp;<a href="https://www.w3.org/WAI/WCAG21/Techniques/html/H98" rel="nofollow noopener">how to use the HTML 5.2 autocomplete</a>&nbsp;attributes.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text">An&nbsp;<a href="https://john.foliot.ca/demos/autofill.php" rel="nofollow noopener">example of a form using autocomplete</a>&nbsp;– (Thanks to John Foliot)</span></li></ul></div>
+
+
+
+<h4 id="references-">References </h4>
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_a0b0d2-e1 kt-svg-icon-list-columns-1 alignnone kt-list-icon-aligntop"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"> <a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html" rel="nofollow noopener"> Understanding document for SC 1.3.5 </a> </span></li></ul></div>

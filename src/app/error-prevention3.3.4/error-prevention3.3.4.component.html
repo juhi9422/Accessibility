@@ -1,0 +1,88 @@
+
+
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">Understanding SC 3.3.4 Error Prevention (Legal, Financial, Data)</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="/WCAG" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>Understanding SC 3.3.4 Error Prevention (Legal, Financial, Data)</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+<div class="Head_1">
+  <span>Table of Contents</span>
+</div>
+<div class="list_1">
+  <ul>
+    <li class="list_2"><a href="#benefit">Users who Benefit</a></li>
+    <li class="list_2"><a href="#points-to-ponder">Points to Ponder</a>
+      <ul><li class="list_2"><a href="#related-wcag-articles">Related WCAG Articles</a></li>
+        <li class="list_2"><a href="#useful-a11y-resources-on-content-on-hover-or-focus">Useful A11Y Resources on Content on Hover or Focus</a>
+          <ul><li class="list_2"><a href="#references">References</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/3.3.4-Error-prevention-legal-financial-data.png?resize=256%2C256&ssl=1" alt="">
+</div>
+<blockquote class="quote"><p>3.3.4 Error Prevention (Legal, Financial, Data): For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true: (Level AA)</p>
+<ol>
+<li>Reversible: Submissions are reversible.</li>
+<li>Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.</li>
+<li>Confirmed: A mechanism is available for reviewing, confirming, and correcting.</li>
+</ol></blockquote>
+
+
+<p class="para_1">Users make mistakes while inputting data into forms &amp; as discussed before in <a href="/error-identification">3.3.1 Error Identification </a>&amp; <a href="/error-suggestion">3.3.3 Error Suggestion </a>help us reduce the incorrect submission of data. But when we are dealing with data related to legal, financial or while sharing sensitive information users need to be provided with an option to verify the data &amp; rectify if there are any mistakes. This is because most of the time once the data is submitted it cannot be retrieved immediately &amp; user might have to get in touch with service provider to rectify it. In case of financial transactions once a transaction takes place there is no way to revert it.</p>
+
+<p class="para_1">For example, if a flight ticket is purchased fora wrong date, there is a chance to rectify it but it comes with a cost where airlines charge a heavy fees to change the date of journey.</p>
+
+<p class="para_1">To avoid errors like these, users need to be provided with review information screen where all the information provided by the user is populated & user need to review & confirm the transaction before moving ahead.</p>
+
+
+
+<h2 id="benefit" class="head_5">Users who Benefit</h2>
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_41af58-b5 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fas_user-friends"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 640 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div><span class="kt-svg-icon-list-text">Users with Cognitive disabilities who can forget too quickly or in utter confusion that arrises out of distraction can enter wrong data</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fas_user-friends"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 640 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div><span class="kt-svg-icon-list-text">Users who use screen readers and who have low vision can accidentally delete data due to confusion or in a hurry to submit the form quickly or delete wrong data due to some misunderstanding of the procedure</span></li></ul></div>
+
+
+
+<h2 id="points-to-ponder" class="head_5">Points to Remember</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_f48dfc-31 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Make sure proper hints are provided to fill the data in the forms</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Provide a review information screen where user provided information is populated</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Provide a checkbox where user can confirm that they have reviewed all the information and they are ready to submit; enable the submit button only when user checks the checkbox</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-3 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Provide confirmation screen or dialogue when users delete any data.</span></li></ul></div>
+
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_b3fdbe-ec kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-3-3-1-error-identification/" data-type="post" data-id="3294">Understanding SC 3.3.1 Error Identification</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-3-3-3-error-suggestion/" data-type="post" data-id="254">Understanding SC 3.3.3 Error Suggestion</a></span></li></ul></div>
+
+
+
+<h3 id="resources-on-error-prevention" class="head_5">Useful A11Y Resources on Error Prevention</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_6493bd-cc kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G98" rel="nofollow noopener">Let the user review and correct information before submission</a>.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G168" rel="nofollow noopener">Requesting confirmation to continue with selected action</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/tutorials/forms/validation/" rel="nofollow noopener">Validating user input</a></span></li></ul></div>
+
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_0012e7-4e kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible.html" rel="nofollow noopener">Understanding Success Criterion 3.3.4 </a></span></li></ul></div>
+
+
+</div>
+</div>
+</div>

@@ -1,0 +1,53 @@
+
+.kadence-breadcrumbs rankmath-bc-wrap{
+  font-size:17px;
+  font-weight:19px;
+  margin-left: -550px;
+  /* padding-left: 30px; */
+  font-family:sans-serif;
+  text-align: center;
+}
+.entry-taxonomies{
+  font-size:17px;
+  padding-left: 40px;
+}
+.entry-title{
+  margin-left: 20px;
+}
+#points-to-ponder,#related-wcag-articles,#references
+{
+  margin: 40px;
+
+}
+
+.kb-table-of-contents-title{
+     margin-left: 20px;
+    font-size: 110%;
+    font-weight: 700;
+    display: block;
+
+}
+.kb-table-of-content-list kb-table-of-content-list-columns-1 kb-table-of-content-list-style-disc kb-table-of-content-link-style-underline{
+    margin-left: 200px;
+    padding-right: -30px;
+}
+.last{
+  margin-left: auto;
+  margin-right: auto;
+}
+p{
+  margin-left: 47px;
+
+}
+.kb-table-of-contents__entry{
+  margin-right: 20px;
+}
+.wp-image-12337 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+.kb-table-of-contents__entry{
+  padding-right: -2000px;
+}

@@ -1,0 +1,95 @@
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">Understanding SC 1.4.13: Content on Hover or Focus</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="/WCAG" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>Understanding SC 1.4.13: Content on Hover or Focus</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+<div class="Head_1">
+  <span>Table of Contents</span>
+</div>
+<div class="list_1">
+  <ul>
+    <li class="list_2"><a href="content-on-hover-or-focus/#dismissible">Dismissible</a></li>
+    <li class="list_2"><a href="content-on-hover-or-focus/#hoverable">Hoverable</a></li>
+    <li class="list_2"><a href="content-on-hover-or-focus/#persistent">Persistent</a></li>
+    <li class="list_2"><a href="content-on-hover-or-focus/#exceptions">Exceptions</a></li>
+    <li class="list_2"><a href="content-on-hover-or-focus/#points-to-ponder">Points to Ponder</a>
+      <ul><li class="list_2"><a href="content-on-hover-or-focus/#related-wcag-articles">Related WCAG Articles</a></li>
+        <li class="list_2"><a href="content-on-hover-or-focus/#useful-a11y-resources-on-content-on-hover-or-focus">Useful A11Y Resources on Content on Hover or Focus</a>
+          <ul><li class="list_2"><a href="content-on-hover-or-focus/#references">References</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/1.4.13-Content-on-Hover-or-Focus.png?resize=256%2C256&ssl=1
+" alt="">
+</div>
+<blockquote class="quote"><p>Success Criterion 1.4.13 Content on Hover or Focus (Level AA): Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:</p><ul>
+<li>Dismissible<br>A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;</li>
+<li>Hoverable<br>If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing;</li>
+<li>Persistent<br>The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.</li>
+</ul></blockquote>
+
+<p class="para_1">In modern design practices, adding new content to the existing work flow is being adopted widely. while the user is interacting with content using a mouse hover or a keyboard focus “the new content may be presented to the user in the form of tooltips, menus, pop-ups &amp; slide outs etc.” These kinds of interactions might pose accessibility challenges to a wide variety of disable user groups as they tend to obscure the content or the user might have trouble pointing the mouse on the triggering element for a long time.</p>
+
+<p class="para_1">This success criterion intends to fill that gap between such additional contents and the operability for people with disabilities with the following guidelines:</p>
+
+<h2 id="dismissible" class="head_5">Dismissible</h2>
+
+<p class="para_1">When a person with low vision uses magnification software to magnify the content on the page &amp; when widgets like tooltips, menus &amp; pop-ups appear, they tend to obscure other content on the page. To avoid this users must be provided a mechanism to dismiss the widgets such as using an escape key or provide a close button while the user is on the additional content itself. By providing these options to dismiss content user can just avail one of these options &amp; get back to the content on the page without moving the mouse pointer.</p>
+
+<h2 id="hoverable" class="head_5">Hoverable</h2>
+
+<p class="para_1">Generally the new content appears when the mouse pointer hovers over the triggering element or when it receives keyboard focus. Users might want to interact with this content &amp; move the mouse pointer to the newly appeared content block, during this scenario there is a greater chance that content might disappear as the mouse pointer is moved away from the triggering element. Here, user must be given an opportunity to interact with the content &amp; must be allowed to move the mouse pointer to the content block that appears.</p>
+
+<h2 id="persistent" class="head_5">Persistent</h2>
+<p class="para_1">The intent of this condition is to satisfy the two conditions discussed above. Also, the users with disabilities would need more time to read the additional content. So setting a timed disappearance of the additional content is not encouraged unless the content itself becomes invalid like a &#8220;busy&#8221; message.<br>In other words, this is the summary:</p>
+
+<ul>
+  <li>User must be provided with an option to dismiss content.</li>
+  <li>User moves the mouse pointer from the trigger or the content block.</li>
+  <li>The content presented is not valid any more…</li>
+</ul>
+
+<h2 id="exceptions" class="head_5">Exceptions</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_6ceb41-62 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_navigation"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg></div><span class="kt-svg-icon-list-text">When the mouse pointer is over an HTML control that has a title element, browsers will display the title value. Since the browser performs this action, it is not covered by this success criterion.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_navigation"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg></div><span class="kt-svg-icon-list-text">Modal dialogs are not affected because focus moves into and remains within it until the user dismisses it.</span></li></ul></div>
+
+<h2 id="points-to-ponder" class="head_5">Points to Ponder</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_acdf3f-01 kt-svg-icon-list-columns-1 alignnone kt-list-icon-aligntop icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Provide a method to dismiss the additional content that appear on hover or keyboard focus.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Make sure that content is present until the user moves away the mouse pointer from the triggering element or content block.</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Make sure that experience is persistent. </span></li></ul></div>
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_373025-fb kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list icon_1"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-2-1-1-keyboard/" data-type="post" data-id="1461">Understanding SC 2.1.1 Keyboard</a></span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-3-2-1-on-focus/" data-type="post" data-id="2976">Understanding SC 3.2.1 On Focus</a></span></li></ul></div>
+
+
+
+<h3 id="useful-a11y-resources-on-content-on-hover-or-focus" class="head_5">Useful A11Y Resources on Content on Hover or Focus</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_56dbf9-21 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus" rel="nofollow noopener">Content on Hover or Focus</a></span></li></ul></div>
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_ff0a21-61 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus.html" rel="nofollow noopener">Understanding Success Criterion 1.4.13: Content on Hover or Focus</a></span></li></ul></div>
+
+</div>
+</div>
+</div>

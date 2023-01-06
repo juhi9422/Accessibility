@@ -1,0 +1,268 @@
+<div class="container">
+
+<div id="inner-wrap" class="wrap hfeed kt-clear">
+		<div id="primary" class="content-area">
+	<div class="content-container site-container">
+		<main id="main" class="site-main" role="main">
+						<div class="content-wrap">
+				<article id="post-1242" class="entry content-bg single-entry post-footer-area-boxed post-1242 post type-post status-publish format-standard has-post-thumbnail hentry category-wcag tag-descriptive tag-focus tag-heading tag-headings tag-label tag-wcag">
+	<div class="entry-content-wrap">
+		<header class="entry-header post-title title-align-inherit title-tablet-align-inherit title-mobile-align-inherit">
+	<div class="kadence-breadcrumbs rankmath-bc-wrap">
+		<nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+			<p>
+				<a href="#">Home</a><span class="separator"> » </span>
+				<span class="last">
+					Understanding SC 2.5.2 Pointer Cancellation
+				</span>
+			</p>
+		</nav>
+	</div>
+	<div class="entry-taxonomies">
+			<span class="category-links term-links category-style-normal">
+				<a href="https://www.digitala11y.com/category/web-accessibility/wcag/" rel="tag">WCAG</a>
+			</span>
+		</div><!-- .entry-taxonomies -->
+		<h1 class="entry-title">Understanding SC 2.5.2 Pointer Cancellation</h1>
+
+</header><!-- .entry-header -->
+
+<div class="entry-content single-content">
+	<nav class="wp-block-kadence-tableofcontents kb-table-of-content-nav kb-table-of-content-id_214275-56" role="navigation" aria-label="Table Of Contents">
+		<div class="kb-table-of-content-wrap">
+			<div class="kb-table-of-contents-title-wrap kb-toggle-icon-style-arrow">
+				<span class="kb-table-of-contents-title">Table of Contents</span>
+			</div>
+			<ul class="kb-table-of-content-list kb-table-of-content-list-columns-1 kb-table-of-content-list-style-disc kb-table-of-content-link-style-underline">
+				<li>
+					<a class="kb-table-of-contents__entry" href="pointer-cancellation/#exceptions-">
+						Exceptions
+					</a>
+				</li>
+        <li>
+					<a class="kb-table-of-contents__entry" href="pointer-cancellation/#wb-">
+						Who benefits?
+					</a>
+				</li>
+				<li>
+					<a class="kb-table-of-contents__entry" href="pointer-cancellation/#-points-to-ponder-">
+						 Points to Ponder
+					 </a>
+					 <ul class="kb-table-of-contents-list-sub">
+						 <li>
+							 <a class="kb-table-of-contents__entry" href="pointer-cancellation/#related-wcag-articles">
+								 Related WCAG Articles</a>
+							 </li>
+							 <li>
+								 <a class="kb-table-of-contents__entry" href="pointer-cancellation/#useful-a11y-resources-on-headings-and-labels">
+									 Useful A11Y Resources on Headings and Labels
+								 </a>
+								 <ul class="kb-table-of-contents-list-sub">
+									 <li>
+										 <a class="kb-table-of-contents__entry" href="pointer-cancellation/#references">
+											 References
+										 </a>
+									 </li>
+								 </ul>
+							 </li>
+						 </ul>
+					 </li>
+				 </ul>
+			 </div>
+		 </nav>
+
+<div class="wp-block-image">
+<figure id="alligncenter" class="aligncenter size-full is-resized">
+  <img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/2.5.2-Pointer-Cancellation.png?resize=300%2C300&ssl=1" alt="" class="wp-image-12414 lazyloaded" width="256" height="256" data-recalc-dims="1" data-ll-status="loaded">
+  <noscript>
+    <img decoding="async" src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/2.5.2-Pointer-Cancellation.png?resize=300%2C300&ssl=1" alt="" class="wp-image-12414" width="256" height="256" data-recalc-dims="1" />
+  </noscript>
+</figure>
+</div>
+
+<blockquote>
+  <p>
+    Success Criterion 2.5.2 Pointer Cancellation (Level A): For&nbsp;functionality&nbsp;that can be operated using a&nbsp;single pointer, at least one of the following is true:
+  </p>
+    <ul>
+      <li>No Down-EventThe&nbsp;down-event&nbsp;of the pointer is not used to execute any part of the function;</li>
+      <li>Abort or UndoCompletion of the function is on the&nbsp;up-event, and a&nbsp;mechanism&nbsp;is available to abort the function before completion or to undo the function after completion;</li>
+      <li>Up ReversalThe up-event reverses any outcome of the preceding down-event;</li>
+      <li>EssentialCompleting the function on the down-event is&nbsp;essential.Functions that emulate a keyboard or numeric keypad key press are considered essential.</li>
+    </ul>
+  </blockquote>
+
+<p>This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).</p>
+
+<p>
+  Scenario A: You are holding down your left mouse key on a web page to drag an item from column A to column B. But in the middle, you decide to stop. Unfortunately, the item is dragged to an incorrect location even after you release the mouse key outside the drag area
+</p>
+<p>Scenario B: You have long fingers and you are operating your home lighting system via your mobile phone. Accidentally, your finger touches the off switch while adjusting the brightness of the lights. Before you lift your finger, the lights get turned off.</p>
+<p>The outcomes of all these two scenarios are accidental but they are caused by only one thing: The down event that activates a functionality or an element.</p>
+<p>This success criterion pointer cancellation intends to eliminate such errors by laying down some key guidelines. To summarize them:</p>
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_dd34ec-9a kt-svg-icon-list-columns-1 alignnone">
+  <ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined">
+    <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_send">
+      <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="22" y1="2" x2="11" y2="13">
+        </line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2">
+        </polygon>
+      </svg>
+    </div>
+    <span class="kt-svg-icon-list-text">
+      Do not use only down event to activate or perform any functionality on a web page
+    </span>
+  </li>
+  <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined">
+    <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_send">
+      <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="22" y1="2" x2="11" y2="13">
+        </line>
+        <polygon points="22 2 15 22 11 13 2 9 22 2">
+        </polygon>
+      </svg>
+    </div>
+    <span class="kt-svg-icon-list-text">
+      Provide a mechanism that cancels out any accidental activation of elements during down event like when an up event occurs or a confirmation before such action takes place.
+    </span>
+  </li>
+</ul>
+</div>
+
+<h2 id="exceptions-">Exceptions</h2>
+<p>
+  This success criterion excepts any essential functionality that requires a down event to execute any such functionality. Examples of such exceptions are keyboard where letters get typed when the users hold down the keys; a piano application where the down event is required to play the instrument.
+</p>
+
+<h2 id="wb-">Who benefits?</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_9ba0d4-e7 kt-svg-icon-list-columns-1 alignnone kt-list-icon-aligntop"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fas_user-friends"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 640 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div><span class="kt-svg-icon-list-text">People with visual disabilities, cognitive disabilities, motor disabilities who may accidentally activate any controls</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fas_user-friends"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 640 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div><span class="kt-svg-icon-list-text">People who may not be aware of the context changes would benefit</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fas_user-friends"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 640 512" height="20" width="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"></path></svg></div><span class="kt-svg-icon-list-text">All the users would benefit when they happen to hit a wrong target.</span></li></ul></div>
+
+<h2 id="-points-to-ponder-"> Points to Ponder </h2>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_1d011a-ef kt-svg-icon-list-columns-1 alignnone">
+  <ul class="kt-svg-icon-list">
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined">
+      <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle">
+        <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+          </path>
+          <polyline points="22 4 12 14.01 9 11.01">
+          </polyline>
+        </svg>
+      </div>
+      <span class="kt-svg-icon-list-text">
+        Ensure down event alone does not execute any functionality
+      </span>
+    </li>
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined">
+      <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle">
+        <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+          </path>
+          <polyline points="22 4 12 14.01 9 11.01">
+          </polyline>
+        </svg>
+      </div>
+      <span class="kt-svg-icon-list-text">
+        Ensure Up event reverses or un-does any down event based action
+      </span>
+    </li>
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined">
+      <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle">
+        <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14">
+          </path>
+          <polyline points="22 4 12 14.01 9 11.01">
+          </polyline>
+        </svg>
+      </div>
+      <span class="kt-svg-icon-list-text">
+        Ensure a mechanism is available to confirm the performed action where down event executes such action
+      </span>
+    </li>
+  </ul>
+</div>
+
+
+
+<h3 id="related-wcag-articles">Related WCAG Articles</h3>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_5cbe49-ea kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text">
+TBD
+</span>
+</li>
+</ul>
+</div>
+
+
+
+<h3 id="useful-a11y-resources-on-headings-and-labels">Useful A11Y Resources on Headings and Labels</h3>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_5caa30-d8 kt-svg-icon-list-columns-1 alignnone">
+  <ul class="kt-svg-icon-list">
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined">
+      <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark">
+        <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
+          </path>
+        </svg>
+      </div>
+      <span class="kt-svg-icon-list-text">
+        <a href="https://www.w3.org/WAI/tips/writing/#use-headings-to-convey-meaning-and-structure" rel="nofollow noopener">
+          Mozilla – Using Touch Events
+        </a>
+      </span>
+    </li>
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined">
+      <div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark">
+        <svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z">
+          </path>
+        </svg>
+      </div>
+      <span class="kt-svg-icon-list-text">
+        <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" rel="nofollow noopener">
+          Input events on Android&nbsp;
+        </a>
+      </span>
+    </li>
+    <li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/tutorials/page-structure/labels/" rel="nofollow noopener">
+      Mozilla – Pointer Events&nbsp;
+    </a>
+  </span>
+</li>
+</ul></div>
+
+
+
+<h4 id="references">References</h4>
+
+
+
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_c00f1a-92 kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html" rel="nofollow noopener">Understanding Success Criterion 2.5.2: Pointer Cancellation</a></span></li></ul></div>
+
+
+
+<div class="is-content-justification-right is-layout-flex wp-container-1 wp-block-buttons">
+<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link" href="https://www.digitala11y.com/focus-visible-understanding-sc-2-4-7/">Read Next: Understanding SC 2.4.7 Focus Visible</a></div>
+</div>
+
+    </div><!-- .entry-content -->
+	</div>
+</article><!-- #post-1242 -->
+
+			</div>
+					</main><!-- #main -->
+
+	</div>
+</div><!-- #primary -->
+	</div>
+</div>

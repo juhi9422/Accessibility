@@ -1,0 +1,87 @@
+
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">Understanding SC 4.1.1 Parsing</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="https://www.digitala11y.com/category/web-accessibility/wcag/" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>Understanding SC 4.1.1 Parsing</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+
+<div class="Head_1">
+  <span>Table of Contents</span>
+</div>
+<div class="list_1">
+  <ul>
+
+    <li class="list_2"><a href="parsing/#components">There are four components to check to pass this SC:</a></li>
+    <li class="list_2"><a href="parsing/#est">How to Test</a></li>
+    <li class="list_2"><a href="parsing/#points-to-ponder">Points to Ponder</a></li>
+      <ul><li class="list_2"><a href="parsing/#related-wcag-articles">Related WCAG Articles</a></li>
+        <li class="list_2"><a href="parsing/#resources-on-parsing">Useful A11Y Resources on Parsing</a>
+          <ul><li class="list_2"><a href="parsing/#references">References</a></li>
+          </ul>
+        </li>
+      </ul>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/4.1.1-parsing.png?resize=256%2C256&ssl=1" alt="">
+</div>
+<blockquote class="quote"><p>4.1.1 Parsing: In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features. (Level A)
+<br>Note: Start and end tags that are missing a critical character in their formation, such as a closing angle bracket or a mismatched attribute value quotation mark are not complete.</p></blockquote>
+
+<p class="para_1">Parsing is all about writing a clean code “HTML, CSS OR JavaScript” in a manner that is understood by browsers & assistive technologies. Browsers & assistive technologies rely on the code in DOM & render the necessary information to the users. If the code is not written according to standards it can break the user experience of the application & assistive technology users will have a lot of problems to deal with.</p>
+
+<h2 class="head_5">There are four components to check to pass this SC:</h2>
+<ul><li>Elements have complete start and end tags: Make sure your HTML has start tags &lt;&gt; &amp; end tags where ever applicable. When end tags are missed the semantic information of the element that is marked-up will spill over to the next element. This affects assistive technology users who rely on semantic information to browse the application.</li><li>Elements are nested according to their specifications: HTML has certain standards &amp; they apply very strongly here. You cannot have div tag inside a span &amp; li tag inside a div without having ul or ol tags. Some of these bugs will show-up during automation testing &amp; HTML validation. While all assistive technologies might not be affected, it is certainly a best practice to avoid these kinds of errors.</li><li>Elements do not contain duplicate attributes: Duplicate attribute means providing the same attribute more than once to the same element. For example providing alt text twice for the img tag or using a title attribute to a form control twice. While these attributes might not affect assistive technologies, it certainly fails HTML validation</li><li>Any IDs are unique: During development process developers need to make sure that any id provided for any element on the page is unique, if the id is not unique &amp; given more than once to different elements it tends to fail automation. Duplicate id’s also affect assistive technologies as they tend to retrieve information that is associated with the first id. Once the duplicate id is provided assistive technologies will not provide correct information even if other WAI-ARIA attributes are correct. For example if first name &amp; last name are provided with same id “id=username” screen readers tend to read both fields as first name once the association takes place. Duplicate id’s can be found through automation tools.</li></ul>
+
+
+<h2 class="head_5">How to Test</h2>
+
+<p>This check point is little tricky to check as we need to have knowledge of HTML as we need to pick the failures manually. Use the <a href="https://www.tpgi.com/wcag-2-0-parsing-error-bookmarklet/" rel="nofollow noopener">WCAG 2.1 parsing error bookmarklet</a> by Steve Faulkner&#8230; The process of how to use the bookmarklet is also explained in the blog.</p>
+
+
+
+
+
+
+<h2 id="points-to-ponder" class="head_5">Points to Ponder</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_19a86c-74 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Use unique ids</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Nest elements according to their specification</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Avoid duplicate attributes</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-3 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Make sure that HTML has both start &amp; end tags.</span></li></ul></div>
+
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_988f13-d8 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-4-1-2-name-role-value/" data-type="post" data-id="264">Understanding SC 4.1.2 Name, Role, Value</a></span></li></ul></div>
+
+
+
+
+<h3 id="resources-on-parsing" class="head_5">Useful A11Y Resources on Parsing</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_427861-f1 kt-svg-icon-list-columns-1 alignnone"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://validator.w3.org/nu/" rel="nofollow noopener">W3C conformance validator</a></span></li></ul></div>
+
+
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_ae2703-92 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html" rel="nofollow noopener">Understanding Success Criterion 4.1.1</a></span></li></ul></div>
+
+
+</div>
+</div>
+</div>

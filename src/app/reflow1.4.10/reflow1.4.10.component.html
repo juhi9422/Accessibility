@@ -1,0 +1,94 @@
+<div class="main_1">
+<div class="col_1">
+
+<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb entry">
+    <li class="breadcrumb-item "><a href="/home" class="entry_3">Home</a></li>
+    <span class="Seprator"> >> </span>
+    <li class="breadcrumb-item active" aria-current="page">Understanding SC 1.4.10 Reflow</li>
+  </ol>
+</nav>
+<div class="entry_1">
+  <span>
+  <a href="/WCAG" rel="tag">WCAG</a>
+  </span>
+</div>
+<div class="a_7">
+<h1>Understanding SC 1.4.10 Reflow</h1>
+</div>
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-smooth-scroll="true">
+<div class="head_main">
+<nav role="navigation" aria-label="Table Of Contents">
+
+  <div class="Head_1">
+    <span>Table of Contents</span>
+  </div>
+  <div class="list_1">
+    <ul>
+      <li class="list_2"><a href="reflow/#meet">How do we meet this?</a></li>
+      <li class="list_2"><a href="reflow/#expected">What is expected?</a></li>
+      <li class="list_2"><a href="reflow/#exceptions">Exceptions</a></li>
+      <li class="list_2"><a href="reflow/#points-to-ponder">Points to Ponder</a></li>
+        <ul><li class="list_2"><a href="reflow/#related-wcag-articles">Related WCAG Articles</a></li>
+          <li class="list_2"><a href="reflow/#useful-a11y-resources-on-error-identification">Useful A11Y Resources on Reflow</a>
+            <ul><li class="list_2"><a href="reflow/#references">References</a></li>
+            </ul>
+          </li>
+        </ul>
+    </ul>
+  </div>
+  </nav>
+  </div>
+<div class="img_2">
+  <img src="https://i0.wp.com/www.digitala11y.com/wp-content/uploads/2021/11/1.4.10-Reflow.png?resize=256%2C256&ssl=1" alt="">
+</div>
+<blockquote class="quote"><p>Success Criterion 1.4.10 Reflow (Level AA): Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:</p>
+<ul>
+  <li>Vertical scrolling content at a width equivalent to 320 CSS pixels;</li>
+  <li>Horizontal scrolling content at a height equivalent to 256 CSS pixels.</li>
+
+  <p>Except for parts of the content which require two-dimensional layout for usage or meaning.
+320 CSS pixels is equivalent to a starting viewport width of 1280 CSS pixels wide at 400% zoom. For web content which is designed to scroll horizontally (e.g., with vertical text), 256 CSS pixels is equivalent to a starting viewport height of 1024 CSS pixels at 400% zoom.
+Examples of content which requires two-dimensional layout are images, maps, diagrams, video, games, presentations, data tables, and interfaces where it is necessary to keep toolbars in view while manipulating content.</p>
+</ul></blockquote>
+
+<p class="para_1">People with low vision use zoom functionality more often than not to read the contents of a web site. In some cases, some users may require more than 200% or – to be more specific – up to 400% of zoom to read the content. Given this use case, there is a high chance of content being hidden to a particular side or being cut off, making it difficult to read.
+This success criterion requires that the content reflows vertically or aligned to a single column without requiring the use of two dimensional scrolling. Technically speaking, the reflow must be supported up to 400% zooming on a desktop with 1280 PX screen which is equivalent to 320 CSS PX. This measurement comes down to a mobile device which has the minimum screen size.</p>
+
+
+<h2 class="head_5" id="meet">How do we meet this?</h2>
+<p class="para_1">Responsive Web Design (RWD) is the only answer to this critical problem. Writing the CSS media queries for different viewport widths would fix most of the issues here. In simple terms, as the user zooms up to 400% or views the content on a small mobile device, the screen realest ate shrinks. RWD, in turn, fits the content into the screen in spite of how smaller the screen is.</p>
+
+<h2 class="head_5" id="expected">What is expected?</h2>
+<p class="para_1">Responsive Web Design (RWD) is the only answer to this critical problem. Writing the CSS media queries for different viewport widths would fix most of the issues here. In simple terms, as the user zooms up to 400% or views the content on a small mobile device, the screen realest ate shrinks. RWD, in turn, fits the content into the screen in spite of how smaller the screen is.</p>
+
+
+<h2 class="head_5" id="exceptions">Exceptions</h2>
+<p class="para_1">Videos, charts, graphs, complex tables and authoring tools that have editing toolbars and any content or user interface components that require two dimensional scrolling to understand the content need not meet the success criterion.</p>
+
+
+<h2 id="points-to-ponder" class="head_5">Points to Ponder</h2>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_9cdaf5-32 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Use Responsive Web Design (RWD) from the conception of design itself</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-1 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Use accessible links, modals, toggle type elements to show or hide content</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-2 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Avoid horizontal scroll bars in 400%zoom</span></li><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-3 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_checkCircle"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div><span class="kt-svg-icon-list-text">Avoid content overlaps, clipping, content loss and functionality loss.</span></li></ul></div>
+
+
+
+
+<h3 id="related-wcag-articles" class="head_5">Related WCAG Articles</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_075066-e6 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_eye"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.digitala11y.com/understanding-sc-1-4-4-resize-text/" data-type="post" data-id="1480">Understanding SC 1.4.4 Resize Text</a></span></li></ul></div>
+
+
+
+
+<h3 id="useful-a11y-resources-on-error-identification" class="head_5">Useful A11Y Resources on Reflow</h3>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_2455fd-95 kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_bookmark"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><span class="kt-svg-icon-list-text">Try <a href="https://www.w3.org/International/articles/vertical-text/index-data/embedded-ar.html" rel="nofollow noopener">triggering horizontal scrolling in vertical languages</a>.</span></li></ul></div>
+
+
+
+<h4 id="references" class="head_5">References</h4>
+<div class="wp-block-kadence-iconlist kt-svg-icon-list-items kt-svg-icon-list-items_37e7a0-0d kt-svg-icon-list-columns-1 alignnone icon_1"><ul class="kt-svg-icon-list"><li class="kt-svg-icon-list-style-default kt-svg-icon-list-item-wrap kt-svg-icon-list-item-0 kt-svg-icon-list-level-undefined"><div style="display:inline-flex;justify-content:center;align-items:center" class="kt-svg-icon-list-single kt-svg-icon-list-single-fe_globe"><svg style="display:inline-block;vertical-align:middle" viewBox="0 0 24 24" height="20" width="20" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><span class="kt-svg-icon-list-text"><a href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html" rel="nofollow noopener"> Understanding SC 1.4.10 </a></span></li></ul></div>
+
+
+
+</div>
+</div>
+</div>

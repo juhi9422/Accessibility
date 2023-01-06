@@ -1,0 +1,83 @@
+/* section {
+    display: block;
+}
+h2 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.5;
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--global-palette3);
+}
+h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.5;
+    font-family: "Source Sans Pro", sans-serif;
+    color: blue;
+}
+#desc{
+  background-color: white;
+  border: 2px solid black;
+  width: 70%;
+  padding: 10px;
+}
+#intent,#benefits,#examples{
+  text-align: justify;
+  width:90%;
+}
+#listheading{
+  font-weight:bold;
+} */
+.entry-header {
+    margin-bottom: 1em;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
+header {
+    display: block;
+}
+
+.entry-content-wrap .entry-header .kadence-breadcrumbs:first-child {
+    margin-top: 0;
+}
+
+.kadence-breadcrumbs {
+    margin: 1em 0;
+    font-size: 85%;
+    color: var(--global-palette5);
+}
+
+.entry-taxonomies {
+    margin-bottom: 0.5em;
+    letter-spacing: .05em;
+    font-size: 70%;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.5;
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--global-palette3);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--global-heading-font-family);
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
